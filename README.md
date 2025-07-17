@@ -7,7 +7,6 @@
 * [Docker](https://www.docker.com/)
 * [Docker Compose](https://docs.docker.com/compose/install/)
 
----
 
 ### ⚙️ Сборка и запуск проекта
 
