@@ -27,7 +27,6 @@ export default function ProfilePage() {
     useEffect(() => {
         dispatch(fetchProfile());
     }, [dispatch]);
-    console.log(profile);
 
     if (isLoading) return <div className="min-h-screen flex items-center justify-center">Загрузка профиля...</div>;
     if (error) return <div className="min-h-screen flex items-center justify-center text-red-500">Ошибка: {error}</div>;
