@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export const ProfileButtons = () => (
+export const ShareButtons = () => (
     <nav className="flex-shrink-0">
         <ul className="flex flex-col gap-4">
             <li className='flex justify-center'>

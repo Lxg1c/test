@@ -12,7 +12,7 @@ const navItems = [
 ];
 
 const Footer = () => {
-    const [activeItem, setActiveItem] = useState<string>('profile');
+    const [activeItem, setActiveItem] = useState<string>('favorites');
 
     return (
         <footer id="footer" className="mt-6 pb-2">

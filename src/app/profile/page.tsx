@@ -23,10 +23,11 @@ import {AboutSection} from "@/features/profile/ui/ProfileAbout";
 export default function ProfilePage() {
     const dispatch = useDispatch<AppDispatch>();
     const { profile, isLoading, error } = useSelector((state: RootState) => state.profile);
-    console.log(profile);
+
     useEffect(() => {
         dispatch(fetchProfile());
     }, [dispatch]);
+    console.log(profile);
 
     if (isLoading) return <div className="min-h-screen flex items-center justify-center">Загрузка профиля...</div>;
     if (error) return <div className="min-h-screen flex items-center justify-center text-red-500">Ошибка: {error}</div>;

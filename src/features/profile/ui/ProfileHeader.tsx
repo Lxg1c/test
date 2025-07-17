@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ProfileAvatar } from "./ProfileAvatar";
-import { ProfileButtons } from "./ProfileButtons";
+import { ShareButtons } from "../../../widgets/shareButtons/ShareButtons";
 
 type Props = {
     avatarUrl?: string;
@@ -17,7 +17,7 @@ export const ProfileHeader = ({ avatarUrl }: Props) => (
         </div>
 
         <div className="absolute top-0 right-0">
-            <ProfileButtons />
+            <ShareButtons />
         </div>
     </div>
 );

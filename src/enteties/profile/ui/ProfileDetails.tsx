@@ -7,11 +7,36 @@ interface ProfileDetailsProps {
 export const ProfileDetails = ({ name, nickname, lastLogin }: ProfileDetailsProps) => {
     const formatTime = (isoString: string) => {
         const date = new Date(isoString);
-        return date.toLocaleTimeString('ru-RU', {
+        const now = new Date();
+
+        const time = date.toLocaleTimeString('ru-RU', {
             hour: '2-digit',
             minute: '2-digit',
-            hour12: false
+            hour12: false,
         });
+
+        const dateOnly = (d: Date) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+
+        const today = dateOnly(now);
+        const yesterday = new Date(today);
+        yesterday.setDate(today.getDate() - 1);
+
+        const loginDate = dateOnly(date);
+
+        if (loginDate.getTime() === today.getTime()) {
+            return `Сегодня ${time}`;
+        } else if (loginDate.getTime() === yesterday.getTime()) {
+            return `Вчера ${time}`;
+        } else {
+            return date.toLocaleDateString('ru-RU', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false,
+            });
+        }
     };
 
     return (
@@ -22,7 +47,7 @@ export const ProfileDetails = ({ name, nickname, lastLogin }: ProfileDetailsProp
             <div className="mt-4 flex items-center justify-between">
                 <p>@{nickname}</p>
                 <p className='last_activity'>
-                    Последняя активность: {lastLogin ? formatTime(lastLogin) : 'неизвестно'}
+                    {lastLogin ? formatTime(lastLogin) : 'неизвестно'}
                 </p>
             </div>
         </div>
