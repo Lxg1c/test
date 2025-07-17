@@ -14,6 +14,7 @@ export const ProfileInfoLinks = () => {
             <ButtonWithIcon text="Правила ИГРУМА" customIcon={<DotIcon />} />
             <Divider />
             <ButtonWithIcon text="Инструкция РУМЕРА" customIcon={<DotIcon />} />
+            <Divider />
             <ButtonWithIcon text="Инструкция МАСТЕРА" customIcon={<DotIcon />} />
             <Divider />
             <ButtonWithIcon text="Инструкция МЕСТА" customIcon={<DotIcon />} />
