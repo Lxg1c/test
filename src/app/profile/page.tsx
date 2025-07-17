@@ -11,7 +11,7 @@ import { ProfileDetails } from '@/enteties/profile/ui/ProfileDetails';
 import { ProfileStats } from '@/features/profile/ui/ProfileStats';
 import { LocationAndSettings } from '@/widgets/profile/LocationAndSettings';
 import { GameStatus } from '@/features/profile/ui/GameStatus';
-import { GameButtons } from '@/features/profile/ui/GameButtons';
+import { GameButtons } from '@/widgets/GameButtons/GameButtons';
 import {ButtonWithIcon} from "@/shared/ui/button/ButtonWithIcon";
 import {SectionBlock} from "@/shared/ui/sectionBlock/SectionBlock";
 import {Divider} from "@/shared/ui/divider/Divider";

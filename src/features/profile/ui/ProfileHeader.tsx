@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { ProfileAvatar } from "./ProfileAvatar";
-import { ShareButtons } from "../../../widgets/shareButtons/ShareButtons";
+import { ShareButtons } from "@/widgets/shareButtons/ShareButtons";
 
 type Props = {
     avatarUrl?: string;
