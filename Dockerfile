@@ -26,7 +26,7 @@ RUN npm install --omit=dev
 # 8. Копируем сборку и публичные файлы
 COPY --from=base /app/.next .next
 COPY --from=base /app/public public
-COPY --from=base /app/next.config.js ./
+COPY --from=base /app/next.config.ts ./
 
 # 9. Старт сервера
 EXPOSE 3000
